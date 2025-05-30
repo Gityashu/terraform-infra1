@@ -49,7 +49,7 @@ jobs:
 
     # Optional: Add steps to store tfstate remotely (S3 for AWS) if not already configured in your .tf files
     - name: Upload Terraform State (if not using remote backend)
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: terraform-state
         path: terraform/terraform.tfstate
