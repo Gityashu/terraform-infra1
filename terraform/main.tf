@@ -125,7 +125,7 @@ resource "aws_instance" "web_server" {
   subnet_id                   = aws_subnet.public.id
   security_groups             = [aws_security_group.ec2_sg.id]
   associate_public_ip_address = true # Ensure public IP is assigned
-  iam_instance_profile        = aws_iam_instance_profile.ec2_profile.name
+  #iam_instance_profile        = aws_iam_instance_profile.ec2_profile.name
 
 
   user_data = <<-EOF
