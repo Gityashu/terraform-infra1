@@ -1,4 +1,7 @@
 
+# Copyright (c) 2025 Gityashu
+# SPDX-License-Identifier: MIT
+# See LICENSE file in the project root for license information.
 
 # Create a VPC 
 resource "aws_vpc" "main" {

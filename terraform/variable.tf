@@ -1,4 +1,7 @@
 
+# Copyright (c) 2025 Gityashu
+# SPDX-License-Identifier: MIT
+# See LICENSE file in the project root for license information.
 variable "aws_region" {
   description = "The AWS region to deploy resources in."
   type        = string

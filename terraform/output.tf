@@ -1,4 +1,7 @@
 
+# Copyright (c) 2025 Gityashu
+# SPDX-License-Identifier: MIT
+# See LICENSE file in the project root for license information.
 output "instance_id" {
   description = "The ID of the EC2 instance."
   value       = aws_instance.web_server.id

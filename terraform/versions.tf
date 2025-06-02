@@ -1,4 +1,7 @@
 terraform {
+# Copyright (c) 2025 Gityashu
+# SPDX-License-Identifier: MIT
+# See LICENSE file in the project root for license information.
   required_version = ">= 1.0.0"
 
   required_providers {
