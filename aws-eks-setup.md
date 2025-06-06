@@ -5,8 +5,8 @@
 ```bash
 # Create Cluster
 eksctl create cluster --name=amcdemo \
-                      --region=us-east-1 \
-                      --zones=us-east-1a,us-east-1b \
+                      --region=ap-south-1 \
+                      --zones=ap-south-1a,ap-south-1b \
                       --without-nodegroup                  
 ```
 
@@ -28,7 +28,7 @@ eksctl utils associate-iam-oidc-provider \
 
 # Replace with region & cluster name
 eksctl utils associate-iam-oidc-provider \
-    --region us-east-1 \
+    --region ap-south-1 \
     --cluster amcdemo \
     --approve
 ```
@@ -52,7 +52,7 @@ eksctl create nodegroup --cluster=amcdemo \
                        --nodes-max=4 \
                        --node-volume-size=20 \
                        --ssh-access \
-                       --ssh-public-key=amc-demo \
+                       --ssh-public-key=common-key\
                        --managed \
                        --asg-access \
                        --external-dns-access \
