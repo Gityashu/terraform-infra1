@@ -61,6 +61,42 @@ eksctl create nodegroup --cluster=amcdemo \
                        --alb-ingress-access
 ```
 
+- eksctl create nodegroup
+- Creates a new worker node group in the specified EKS cluster.
+- --cluster=amcdemo
+- Specifies the EKS cluster name (amcdemo) where the node group will be added.
+- --region=us-east-1
+- Sets the AWS region (us-east-1) where the EKS cluster is running.
+- --name=amcdemo-ng-public1
+- Assigns a name (amcdemo-ng-public1) to the new node group.
+- --node-type=t3.medium
+- Specifies the EC2 instance type (t3.medium) for the worker nodes in this group.
+- --nodes=2
+- Starts with 2 nodes in the group.
+- --nodes-min=2
+- Defines the minimum number of nodes the group can scale down to.
+- --nodes-max=4
+- Defines the maximum number of nodes the group can scale up to.
+- --node-volume-size=20
+- Allocates 20 GB of storage for each node.
+- --ssh-access
+- Enables SSH access to the nodes.
+- --ssh-public-key=common-key
+- Uses the specified SSH public key (common-key) for access.
+- --managed
+- Creates a managed node group, meaning AWS will automatically handle updates and scaling.
+- --asg-access
+- Grants access to the Auto Scaling Group (ASG) for managing node scaling.
+- --external-dns-access
+- Allows external DNS services to interact with the node group.
+- --full-ecr-access
+- Grants full access to Amazon Elastic Container Registry (ECR), enabling the use of private Docker images.
+- --appmesh-access
+- Provides access to AWS App Mesh, which is used for service-to-service networking.
+- --alb-ingress-access
+- Enables integration with AWS Application Load Balancer (ALB) Ingress Controller, useful for managing incoming traffic.
+
+
 ## Step 05: Verify Cluster & Nodes
 
 ```bash
