@@ -98,3 +98,15 @@ eksctl delete nodegroup --cluster=amcdemo --name=amcdemo-ng-public
 eksctl delete cluster <clusterName>
 eksctl delete cluster amcdemo
 ```
+
+Nodes vs. Pods in AWS EKS
+| Component | Description | 
+| Nodes | These are the worker machines (EC2 instances) that run your applications. They provide the computing power needed to execute workloads. | 
+| Pods | The smallest deployable unit in Kubernetes, a pod contains one or more containers that share storage and networking. Pods run on nodes. | 
+
+
+Key Differences
+- Nodes are the physical or virtual machines that host pods.
+- Pods are the execution units that contain your application containers.
+- A node can run multiple pods, depending on its capacity.
+- Pods are ephemeral—if a pod fails, Kubernetes can replace it automatically.
