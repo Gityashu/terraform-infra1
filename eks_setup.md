@@ -66,3 +66,29 @@ eksctl create cluster --name yashu-cluster4 --region ap-south-1 --node-type t2.m
 ```
 eksctl delete cluster --name yashu-cluster4 --region ap-south-1
 ```
+
+# Method 1: Using curl
+Download the kubectl Binary:
+
+#For x86-64 systems
+curl -LO "https://dl.k8s.io/release/$(curl -L -s 
+https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+#For ARM64 systems
+curl -LO "https://dl.k8s.io/release/$(curl -L -s 
+https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl"
+
+# Validate the Binary (optional):
+#Download the checksum file
+curl -LO "https://dl.k8s.io/release/$(curl -L -s 
+https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+
+# Validate the binary
+echo "$(cat kubectl.sha256) kubectl" | sha256sum --check
+
+
+# Install kubectl:
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+
+# Verify Installation:
+kubectl version --client
